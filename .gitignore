@@ -21,6 +21,13 @@ ehthumbs.db
 #############################
 /*
 !.gitignore
+!assets/
+!src
+!index.html
+!package-lock.json
+!package.json
+!postcss.config.js
+!tailwind.config.js
 
 #############################
 # Ignore everything in the "wp-content" directory, except the "themes" directory.
