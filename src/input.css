@@ -1,23 +1,25 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .holder {
-  @apply max-w-[1066px] m-auto px-6 md:px-11 lg:px-16;
+  @apply max-w-[1312px] m-auto px-6 md:px-11 lg:px-16;
 }
 
 @layer base {
   body {
-    @apply flex flex-col min-h-screen font-montserrat font-normal text-black;
+    @apply flex flex-col min-h-screen font-nunitosans font-normal text-black;
   }
 
   p,
   ul,
   ol {
-    @apply text-lg leading-6 font-normal tracking-[0.01063rem];
+    @apply text-lg leading-6 font-normal text-justify tracking-[0.01063rem] text-[#005060];
   }
 
   .block-pad {
@@ -42,8 +44,7 @@
 }
 .gridCol .gridGallery {
   grid-column: col 3 / span 10;
-  grid-row:span 3;
-  
+  grid-row: span 3;
 }
 .gridCol .gridContent {
   grid-column: col 3 / span 10;

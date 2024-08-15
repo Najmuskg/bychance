@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        nunitosans: ["Nunito Sans", "sans-serif"],
       },
 
       fontSize: {
