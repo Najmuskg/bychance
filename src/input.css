@@ -34,7 +34,7 @@
   p,
   ul,
   ol {
-    @apply text-base leading-6 font-normal text-justify tracking-[0.01063rem];
+    @apply text-base leading-6 font-normal text-justify;
   }
 
   .block-pad {
@@ -50,4 +50,10 @@
   .main--menu {
     @apply bg-primary py-8;
   }
+
+  .hover-effect {
+    @apply relative after:content-[''] after:block after:w-0 after:absolute after:h-[1px] after:bg-white after:[transition:width_.3s] after:hover:w-full after:hover:bg-white after:right-0 after:[left:initial] hover:after:[right:initial] hover:after:left-0;
+  }
 }
+
+
