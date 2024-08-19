@@ -14,6 +14,23 @@
     @apply flex flex-col min-h-screen font-montserrat font-normal text-black;
   }
 
+  .linkBtn {
+    @apply inline-flex items-center gap-4 uppercase hover:text-secondary transition-all duration-500;
+  }
+
+  .linkBtn:hover > svg > path {
+    @apply stroke-secondary transition-all duration-500;
+  }
+
+  h2 {
+    @apply text-38 font-bold leading-[119%];
+  }
+
+  h3 {
+    @apply text-32 font-bold leading-[100%];
+  }
+
+
   p,
   ul,
   ol {
