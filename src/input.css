@@ -30,7 +30,6 @@
     @apply text-32 font-bold leading-[100%];
   }
 
-
   p,
   ul,
   ol {
@@ -56,4 +55,38 @@
   }
 }
 
+@layer utilities {
+  .toggleNav i {
+    transition: all 0.3s ease-in-out;
+  }
+  .menu {
+    transition: all 0.3s ease-in-out;
+  }
 
+  .toggleNav.active i:nth-child(1) {
+    @apply rotate-45 top-[9px];
+  }
+
+  .toggleNav.active i:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .toggleNav.active i:nth-child(3) {
+    @apply -rotate-45 -top-[7px];
+  }
+}
+/* .menu {
+  @apply opacity-0 invisible h-0 lg:opacity-100 lg:visible lg:h-full;
+}
+
+.menu.expand {
+  @apply opacity-100 visible h-full;
+} */
+
+.menuWrap {
+  @apply invisible lg:visible opacity-0 lg:opacity-100;
+}
+
+.menuWrap.nav-expanded {
+  @apply visible lg:invisible opacity-100 lg:opacity-0;
+}
