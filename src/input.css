@@ -30,7 +30,6 @@
     @apply text-32 font-bold leading-[100%];
   }
 
-
   p,
   ul,
   ol {
@@ -47,13 +46,52 @@
   .btn--yellow {
     @apply bg-secondary;
   }
-  .main--menu {
-    @apply bg-primary py-8;
-  }
 
   .hover-effect {
     @apply relative after:content-[''] after:block after:w-0 after:absolute after:h-[1px] after:bg-white after:[transition:width_.3s] after:hover:w-full after:hover:bg-white after:right-0 after:[left:initial] hover:after:[right:initial] hover:after:left-0;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .main--menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    z-index: 99;
+    padding: 60px;
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+}
 
+body.nav-expanded .main--menu {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px;
+  transition: all 0.5s ease-in-out;
+}
+
+.toggleNav i {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+body.nav-expanded .toggleNav i {
+  @apply bg-white;
+}
+
+body.nav-expanded .toggleNav i:nth-child(1) {
+  @apply rotate-45 top-[9px];
+}
+
+body.nav-expanded .toggleNav i:nth-child(2) {
+  @apply opacity-0;
+}
+
+body.nav-expanded .toggleNav i:nth-child(3) {
+  @apply -rotate-45 -top-[7px];
+}
